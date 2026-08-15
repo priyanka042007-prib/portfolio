@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Project details - Computer Science student and developer portfolio">
+
+    <title>Project Details | Priyanka Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                <span>&lt;</span>Priyanka<span>/&gt;</span>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#projects" class="active">Projects</a></li>
+                <li><a href="index.html#achievements">Achievements</a></li>
+                <li><a href="index.html#certificates">Certificates</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+
+            </ul>
+
+            <div class="nav-actions">
+
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button id="menuBtn" class="icon-btn menu-btn" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PROJECT DETAILS ================= -->
+
+    <main>
+
+        <section class="section project-detail-section">
+
+            <div class="project-detail-container">
+
+                <a href="index.html#projects" class="back-link">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to all projects
+                </a>
+
+                <!-- Loading State -->
+                <div id="loadingState" class="detail-state">
+                    <div class="spinner"></div>
+                    <h2>Loading Project...</h2>
+                    <p>Fetching project details from the server</p>
+                </div>
+
+                <!-- Error State -->
+                <div id="errorState" class="detail-state" style="display: none;">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <h2 id="errorTitle">Project Not Found</h2>
+                    <p id="errorMessage">We couldn't find the requested project. It may have been removed or the link might be incorrect.</p>
+                    <a href="index.html#projects" class="btn primary-btn">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Return to Projects
+                    </a>
+                </div>
+
+                <!-- Content State -->
+                <article id="projectContent" class="project-detail-card" style="display: none;">
+
+                    <div class="project-detail-header">
+
+                        <span class="project-detail-badge">FEATURED PROJECT</span>
+
+                        <h1 id="projectName">Project Title</h1>
+
+                        <div class="project-tags" id="projectTags">
+                            <!-- Dynamic tags -->
+                        </div>
+
+                    </div>
+
+                    <div class="detail-block">
+
+                        <h3>
+                            <i class="fa-solid fa-circle-info"></i>
+                            About the Project
+                        </h3>
+
+                        <p id="projectDescription">
+                            Project description will appear here.
+                        </p>
+
+                    </div>
+
+                    <div class="detail-block" id="featuresContainer">
+
+                        <h3>
+                            <i class="fa-solid fa-list-check"></i>
+                            Key Features
+                        </h3>
+
+                        <ul class="feature-list" id="projectFeatures">
+                            <!-- Dynamic features -->
+                        </ul>
+
+                    </div>
+
+                    <div class="detail-actions">
+
+                        <a href="index.html#projects" class="btn outline-btn">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            Back to Projects
+                        </a>
+
+                        <a href="index.html#contact" class="btn primary-btn">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Discuss This Project
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+            <a href="index.html" class="logo">
+                <span>&lt;</span>Priyanka<span>/&gt;</span>
+            </a>
+
+            <p>
+                Designed & developed with passion.
+            </p>
+
+            <div class="footer-social">
+
+                <a href="#" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Priyanka. All rights reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- Scroll To Top -->
+
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <script src="project.js"></script>
+
+</body>
+
+</html>
