@@ -139,7 +139,7 @@ contactForm.addEventListener("submit", async function (event) {
     formStatus.style.color = "var(--blue)";
 
     try {
-        const response = await fetch("http://localhost:5000/api/contact", {
+        const response = await fetch("https://portfolio-backend-xrxg.onrender.com/api/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -207,7 +207,7 @@ if (themeToggle) {
 
     });
 }
-fetch("http://localhost:5000/api")
+fetch("https://portfolio-backend-xrxg.onrender.com/api")
     .then(response => response.json())
     .then(data => {
         console.log(data.message);
@@ -222,7 +222,7 @@ fetch("http://localhost:5000/api")
 
 const projectsGrid = document.querySelector(".projects-grid");
 
-fetch("http://localhost:5000/api/projects")
+fetch("https://portfolio-backend-xrxg.onrender.com/api/projects")
     .then(response => {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);

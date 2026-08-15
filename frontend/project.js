@@ -130,7 +130,7 @@ function loadProjectDetails() {
         return;
     }
 
-    fetch(`http://localhost:5000/api/projects/${encodeURIComponent(projectId)}`)
+    fetch(`https://portfolio-backend-xrxg.onrender.com/api/projects/${encodeURIComponent(projectId)}`)
         .then(response => {
             if (response.status === 404) {
                 throw new Error("Project not found");
